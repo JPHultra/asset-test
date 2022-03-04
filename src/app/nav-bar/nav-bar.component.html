@@ -1,5 +1,8 @@
 <nav *ngIf="sessionData.logged" class="navbar">
   <div id="navbarItems" class="navbarItems">
+    <div class="nav-item">
+      <a href="#">Stuff</a>
+    </div>
     <div class="image-btn">
       <span>{{sessionData.name}}</span>
       <img [ngClass]="selected ? 'profile-image selected-profile-img' : 'profile-image not-selected'" (click)="openProfileMenu();" src="/assets/profilePic.jpeg" alt="{{sessionData.name}">
