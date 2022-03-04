@@ -1,0 +1,13 @@
+<nav *ngIf="sessionData.logged" class="navbar">
+  <div id="navbarItems" class="navbarItems">
+    <div class="image-btn">
+      <span>{{sessionData.name}}</span>
+      <img [ngClass]="selected ? 'profile-image selected-profile-img' : 'profile-image not-selected'" (click)="openProfileMenu();" src="/assets/profilePic.jpeg" alt="{{sessionData.name}">
+    </div>
+  </div>
+</nav>
+
+<div [ngClass]="selected ? 'sidePanel open-side-panel' : 'sidePanel close-side-panel'">
+  <a href="#">Perfil</a>
+  <a (click)="logout();">Logout</a>
+</div>

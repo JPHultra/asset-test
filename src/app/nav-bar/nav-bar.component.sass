@@ -1,0 +1,80 @@
+.sidePanel
+  z-index: 1
+  position: fixed
+  right: -300px
+  width: 300px
+  background-color: #616c7d
+  transition: 0.3s
+  padding-bottom: 15px
+
+  display: flex
+  flex-direction: column
+  flex-wrap: nowrap
+
+  *
+    align-self: center
+
+  a
+    margin-top: 15px
+    padding: 10px 30px 10px 30px
+    text-decoration: none
+    color: black
+    font-size: 18px
+    transition: 0.3s
+    cursor: pointer
+
+  a:hover
+    font-size: 25px
+    transition: 0.3s
+
+.open-side-panel
+  transition: 0.3s
+  right: 0px
+
+.selected-profile-img
+  transition: 0.3s
+  box-shadow: 0 0 0 5px lightblue
+
+.not-selected
+  transition: 0.3s
+  box-shadow: 0 0 0 0px lightgray
+
+.navbar
+  display: flex
+  justify-content: center
+  width: 100%
+  background-color: #7c8aa1
+
+  .navbarItems
+    width: 95%
+    display: flex
+    align-self: center
+    justify-content: flex-end
+    flex-direction: row
+    flex-wrap: nowrap
+
+    .image-btn
+      display: flex
+      flex-direction: row
+      flex-wrap: nowrap
+      justify-content: center
+      padding: 10px
+
+      *
+        align-self: center
+
+      span
+        font-size: 17px
+
+      .profile-image
+        border-radius: 50%
+        width: 3em
+        margin-left: 1em
+
+      .not-selected:hover
+        box-shadow: 0 0 0 5px lightgray
+        transition: 0.3s
+
+      .selected-profile-img:hover
+        box-shadow: 0 0 0 5px lightblue
+        transition: 0.3s
