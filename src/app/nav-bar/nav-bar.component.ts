@@ -23,6 +23,16 @@ export class NavBarComponent implements OnInit {
     this.selected = !this.selected;
   }
 
+  redirectDashboard(){
+    this.selected = false;
+    this.router.navigate(['/dashboard']);
+  }
+
+  redirectPerfil(){
+    this.selected = false;
+    this.router.navigate(['/perfil']);
+  }
+
   @HostListener('document:click', ['$event'])
   clickout(event: any) {
     if(!this.eRef.nativeElement.contains(event.target)) {

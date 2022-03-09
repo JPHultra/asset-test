@@ -12,13 +12,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { SessionServiceService as SessionService } from './session-service.service';
+import { PerfilComponent } from './perfil/perfil.component';
+
+import { MatGridListModule } from "@angular/material/grid-list";
+import { MatCardModule } from "@angular/material/card";
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +31,9 @@ import { SessionServiceService as SessionService } from './session-service.servi
     NgbModule,
     BrowserAnimationsModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    MatGridListModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

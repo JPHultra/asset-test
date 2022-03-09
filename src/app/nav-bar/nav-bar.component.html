@@ -1,11 +1,14 @@
 <nav *ngIf="sessionData.logged" class="navbar">
   <div id="navbarItems" class="navbarItems">
-    <div class="nav-item">
+    <div class="nav-title">
+      <h1 (click)="redirectDashboard();">{{title}}</h1>
+    </div>
+    <!--<div class="nav-item">
       <a href="#">Dashboard</a>
     </div>
     <div class="nav-item">
       <a href="#">Dashboard</a>
-    </div>
+    </div>-->
     <div class="image-btn">
       <span>{{sessionData.name}}</span>
       <img [ngClass]="selected ? 'profile-image selected-profile-img' : 'profile-image not-selected'" (click)="openProfileMenu();" src="/assets/profilePic.jpeg" alt="{{sessionData.name}">
@@ -14,6 +17,6 @@
 </nav>
 
 <div [ngClass]="selected ? 'sidePanel open-side-panel' : 'sidePanel close-side-panel'">
-  <a href="#">Perfil</a>
+  <a (click)="redirectPerfil();">Perfil</a>
   <a (click)="logout();">Logout</a>
 </div>
